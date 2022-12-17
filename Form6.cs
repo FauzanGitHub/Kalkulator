@@ -50,6 +50,7 @@ namespace Kalkulator
 
             result = Double.Parse(txtResult.Text);
             operand = newOperand;
+
             firstnum = lbResult.Text;
 
         }

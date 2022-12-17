@@ -331,7 +331,6 @@ namespace Kalkulator
             form.Show();
             this.Hide();
         }
-
         private void simpleV3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form6 form = new Form6();

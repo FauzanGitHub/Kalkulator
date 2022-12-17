@@ -34,6 +34,7 @@ namespace Kalkulator
             this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scientificToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.simpleV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpleV3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loanManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@ namespace Kalkulator
             this.rtfReceipt = new System.Windows.Forms.RichTextBox();
             this.lblMonthlyPayment = new System.Windows.Forms.Label();
             this.lblTotalPayment = new System.Windows.Forms.Label();
-            this.simpleV3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -86,43 +86,50 @@ namespace Kalkulator
             // simpleToolStripMenuItem
             // 
             this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
-            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.simpleToolStripMenuItem.Text = "Simple";
             this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
             // 
             // scientificToolStripMenuItem
             // 
             this.scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
-            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.scientificToolStripMenuItem.Text = "Scientific";
             this.scientificToolStripMenuItem.Click += new System.EventHandler(this.scientificToolStripMenuItem_Click);
             // 
             // simpleV2ToolStripMenuItem
             // 
             this.simpleV2ToolStripMenuItem.Name = "simpleV2ToolStripMenuItem";
-            this.simpleV2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.simpleV2ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.simpleV2ToolStripMenuItem.Text = "Simple V2";
             this.simpleV2ToolStripMenuItem.Click += new System.EventHandler(this.simpleV2ToolStripMenuItem_Click);
+            // 
+            // simpleV3ToolStripMenuItem
+            // 
+            this.simpleV3ToolStripMenuItem.Name = "simpleV3ToolStripMenuItem";
+            this.simpleV3ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.simpleV3ToolStripMenuItem.Text = "Simple V3";
+            this.simpleV3ToolStripMenuItem.Click += new System.EventHandler(this.simpleV3ToolStripMenuItem_Click);
             // 
             // loanManagementToolStripMenuItem
             // 
             this.loanManagementToolStripMenuItem.Checked = true;
             this.loanManagementToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.loanManagementToolStripMenuItem.Name = "loanManagementToolStripMenuItem";
-            this.loanManagementToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanManagementToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.loanManagementToolStripMenuItem.Text = "Loan Management";
             // 
             // temperatureToolStripMenuItem
             // 
             this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
-            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.temperatureToolStripMenuItem.Text = "Temperature";
             this.temperatureToolStripMenuItem.Click += new System.EventHandler(this.temperatureToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -296,18 +303,12 @@ namespace Kalkulator
             this.lblTotalPayment.Size = new System.Drawing.Size(184, 39);
             this.lblTotalPayment.TabIndex = 19;
             // 
-            // simpleV3ToolStripMenuItem
-            // 
-            this.simpleV3ToolStripMenuItem.Name = "simpleV3ToolStripMenuItem";
-            this.simpleV3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.simpleV3ToolStripMenuItem.Text = "Simple V3";
-            this.simpleV3ToolStripMenuItem.Click += new System.EventHandler(this.simpleV3ToolStripMenuItem_Click);
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 433);
+            this.ControlBox = false;
             this.Controls.Add(this.lblTotalPayment);
             this.Controls.Add(this.lblMonthlyPayment);
             this.Controls.Add(this.rtfReceipt);

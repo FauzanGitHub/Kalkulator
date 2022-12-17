@@ -348,6 +348,7 @@ namespace Kalkulator
             this.rtbDisplayHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbDisplayHistory.Location = new System.Drawing.Point(398, 52);
             this.rtbDisplayHistory.Name = "rtbDisplayHistory";
+            this.rtbDisplayHistory.ReadOnly = true;
             this.rtbDisplayHistory.Size = new System.Drawing.Size(271, 210);
             this.rtbDisplayHistory.TabIndex = 21;
             this.rtbDisplayHistory.Text = "";
@@ -356,7 +357,7 @@ namespace Kalkulator
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(501, 0);
+            this.label1.Location = new System.Drawing.Point(514, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 22;
@@ -374,9 +375,9 @@ namespace Kalkulator
             // 
             // btnClearHistory
             // 
-            this.btnClearHistory.Location = new System.Drawing.Point(615, 261);
+            this.btnClearHistory.Location = new System.Drawing.Point(615, 268);
             this.btnClearHistory.Name = "btnClearHistory";
-            this.btnClearHistory.Size = new System.Drawing.Size(54, 34);
+            this.btnClearHistory.Size = new System.Drawing.Size(54, 27);
             this.btnClearHistory.TabIndex = 24;
             this.btnClearHistory.Text = "Hapus";
             this.btnClearHistory.UseVisualStyleBackColor = true;
@@ -387,6 +388,7 @@ namespace Kalkulator
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 297);
+            this.ControlBox = false;
             this.Controls.Add(this.btnClearHistory);
             this.Controls.Add(this.lblHistoryDisplay);
             this.Controls.Add(this.label1);
