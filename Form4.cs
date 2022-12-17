@@ -101,7 +101,7 @@ namespace Kalkulator
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult exitCal;
-            exitCal = MessageBox.Show("Confirm if you want to Exit", "Simple Calculator",
+            exitCal = MessageBox.Show("Confirm if you want to Exit", "Loan Management",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (exitCal == DialogResult.Yes)
