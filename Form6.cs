@@ -15,6 +15,7 @@ namespace Kalkulator
         bool operandPerformed = false;
         string operand = "";
         double result = 0;
+        string firstnum, secondnum;
         public Form6()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace Kalkulator
 
             result = Double.Parse(txtResult.Text);
             operand = newOperand;
+            firstnum = lbResult.Text;
 
         }
 
@@ -67,6 +69,7 @@ namespace Kalkulator
 
         private void bEq_Click(object sender, EventArgs e)
         {
+            secondnum = txtResult.Text;
             lbResult.Text = "";
             operandPerformed = true;
 
@@ -83,6 +86,11 @@ namespace Kalkulator
             txtResult.Text = result.ToString();
             result = 0;
             operand = "";
+
+            btnClearHistory.Visible = true;
+            rtbDisplayHistory.AppendText(firstnum + "   " + secondnum + "  =  " + "\n");
+            rtbDisplayHistory.AppendText("\n\t" + txtResult.Text+"\n\n");
+            lblHistoryDisplay.Text = "";
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -154,6 +162,17 @@ namespace Kalkulator
             Form3 form = new Form3();
             form.Show();
             this.Hide();
+        }
+
+        private void btnClearHistory_Click(object sender, EventArgs e)
+        {
+            rtbDisplayHistory.Clear();
+            if(lblHistoryDisplay.Text =="")
+            {
+                lblHistoryDisplay.Text = "There's No History Yet";
+            }
+            btnClearHistory.Visible = false;
+            rtbDisplayHistory.ScrollBars = 0;
         }
     }
 }

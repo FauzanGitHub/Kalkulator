@@ -58,6 +58,10 @@ namespace Kalkulator
             this.bEq = new System.Windows.Forms.Button();
             this.bC = new System.Windows.Forms.Button();
             this.bSub = new System.Windows.Forms.Button();
+            this.rtbDisplayHistory = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblHistoryDisplay = new System.Windows.Forms.Label();
+            this.btnClearHistory = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +71,7 @@ namespace Kalkulator
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(373, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(681, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,14 +92,14 @@ namespace Kalkulator
             // simpleToolStripMenuItem
             // 
             this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
-            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.simpleToolStripMenuItem.Text = "Simple";
             this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
             // 
             // simpleV2ToolStripMenuItem
             // 
             this.simpleV2ToolStripMenuItem.Name = "simpleV2ToolStripMenuItem";
-            this.simpleV2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.simpleV2ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.simpleV2ToolStripMenuItem.Text = "Simple V2";
             this.simpleV2ToolStripMenuItem.Click += new System.EventHandler(this.simpleV2ToolStripMenuItem_Click);
             // 
@@ -104,34 +108,34 @@ namespace Kalkulator
             this.simpleV3ToolStripMenuItem.Checked = true;
             this.simpleV3ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.simpleV3ToolStripMenuItem.Name = "simpleV3ToolStripMenuItem";
-            this.simpleV3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.simpleV3ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.simpleV3ToolStripMenuItem.Text = "Simple V3";
             // 
             // scientificToolStripMenuItem
             // 
             this.scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
-            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.scientificToolStripMenuItem.Text = "Scientific";
             this.scientificToolStripMenuItem.Click += new System.EventHandler(this.scientificToolStripMenuItem_Click);
             // 
             // loanManagementToolStripMenuItem
             // 
             this.loanManagementToolStripMenuItem.Name = "loanManagementToolStripMenuItem";
-            this.loanManagementToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanManagementToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.loanManagementToolStripMenuItem.Text = "Loan Management";
             this.loanManagementToolStripMenuItem.Click += new System.EventHandler(this.loanManagementToolStripMenuItem_Click);
             // 
             // temperatureToolStripMenuItem
             // 
             this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
-            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.temperatureToolStripMenuItem.Text = "Temperature";
             this.temperatureToolStripMenuItem.Click += new System.EventHandler(this.temperatureToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -338,11 +342,55 @@ namespace Kalkulator
             this.bSub.UseVisualStyleBackColor = true;
             this.bSub.Click += new System.EventHandler(this.OperandEvent);
             // 
+            // rtbDisplayHistory
+            // 
+            this.rtbDisplayHistory.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbDisplayHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbDisplayHistory.Location = new System.Drawing.Point(398, 52);
+            this.rtbDisplayHistory.Name = "rtbDisplayHistory";
+            this.rtbDisplayHistory.Size = new System.Drawing.Size(271, 210);
+            this.rtbDisplayHistory.TabIndex = 21;
+            this.rtbDisplayHistory.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(501, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "History";
+            // 
+            // lblHistoryDisplay
+            // 
+            this.lblHistoryDisplay.AutoSize = true;
+            this.lblHistoryDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoryDisplay.Location = new System.Drawing.Point(447, 29);
+            this.lblHistoryDisplay.Name = "lblHistoryDisplay";
+            this.lblHistoryDisplay.Size = new System.Drawing.Size(189, 20);
+            this.lblHistoryDisplay.TabIndex = 23;
+            this.lblHistoryDisplay.Text = "There\'s No History Yet";
+            // 
+            // btnClearHistory
+            // 
+            this.btnClearHistory.Location = new System.Drawing.Point(615, 261);
+            this.btnClearHistory.Name = "btnClearHistory";
+            this.btnClearHistory.Size = new System.Drawing.Size(54, 34);
+            this.btnClearHistory.TabIndex = 24;
+            this.btnClearHistory.Text = "Hapus";
+            this.btnClearHistory.UseVisualStyleBackColor = true;
+            this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 303);
+            this.ClientSize = new System.Drawing.Size(681, 297);
+            this.Controls.Add(this.btnClearHistory);
+            this.Controls.Add(this.lblHistoryDisplay);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.rtbDisplayHistory);
             this.Controls.Add(this.bEq);
             this.Controls.Add(this.bC);
             this.Controls.Add(this.bSub);
@@ -406,5 +454,9 @@ namespace Kalkulator
         private System.Windows.Forms.Button bEq;
         private System.Windows.Forms.Button bC;
         private System.Windows.Forms.Button bSub;
+        private System.Windows.Forms.RichTextBox rtbDisplayHistory;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHistoryDisplay;
+        private System.Windows.Forms.Button btnClearHistory;
     }
 }
