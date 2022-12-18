@@ -153,7 +153,6 @@ namespace Kalkulator
             this.txtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResult.Location = new System.Drawing.Point(12, 47);
             this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(344, 31);
             this.txtResult.TabIndex = 2;
             this.txtResult.Text = "0";
