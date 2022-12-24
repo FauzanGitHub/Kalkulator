@@ -128,7 +128,7 @@ namespace Kalkulator
             this.comboBox1.Items.AddRange(new object[] {
             "Celcius to Fahrenheit",
             "Celcius to Kelvin",
-            "Ceclius to Reamur",
+            "Celcius to Reamur",
             "Reamur to Fahrenheit",
             "Reamur to Celcius",
             "Reamur to Kelvin",

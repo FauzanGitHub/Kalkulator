@@ -24,62 +24,62 @@ namespace Kalkulator
 
         private double FahrenheitToCelcius
         {
-            get { return (Fahrenheit - 32) * (5 / 9); }
+            get { return (5/9)*(Fahrenheit-32); }
             set { Fahrenheit = value; }
         }
         private double FahrenheitToKelvin
         {
-            get { return (Fahrenheit - 32) * (5 / 9) + 273.15; }
+            get { return (5/9)*(Fahrenheit-32)+273; }
             set { Fahrenheit = value; }
         }
         private double FahrenheitToReamur
         {
-            get { return (Fahrenheit - 32) * (4 / 9); }
+            get { return (4/9)*(Fahrenheit-32); }
             set { Fahrenheit = value; }
         }
         private double CelciusToKelvin
         {
-            get { return Celcius + 273.15; }
+            get { return Celcius+273; }
             set { Celcius = value; }
         }
         private double CelciusToFahrenheit
         {
-            get { return (Celcius * (9 / 5)) + 32; }
+            get { return (9/5)*Celcius+32; }
             set { Celcius = value; }
         }
         private double CelciusToReamur
         {
-            get { return (4/5) * Reamur; }
+            get { return (4/5)*Celcius; }
             set { Celcius = value; }
         }
         private double ReamurToFahrenheit
         {
-            get { return ((9 / 4) * Fahrenheit) + 32; }
+            get { return (9/4)*Reamur+32; }
             set { Reamur = value; }
         }
         private double ReamurToCelcius
         {
-            get { return (5 / 4) * Reamur; }
+            get { return (5/4)*Reamur; }
             set { Reamur = value; }
         }
         private double ReamurToKelvin
         {
-            get { return ((5 / 4) * Reamur) + 273.15; }
+            get { return (5/4)*Reamur+273; }
             set { Reamur = value; }
         }
         private double KelvinToCelcius
         {
-            get { return Kelvin - 273.15; }
+            get { return Kelvin-273; }
             set { Kelvin = value; }
         }
         private double KelvinToFahrenheit
         {
-            get { return (Kelvin - 273.15) * (9 / 5) + 32; }
+            get { return (9/5)*(Kelvin-273)+32; }
             set { Kelvin = value; }
         }
         private double KelvinToReamur
         {
-            get { return ((4/5) * Kelvin) - 273.15; }
+            get { return (4/5)*(Kelvin-273); }
             set { Kelvin = value; }
         }
 
