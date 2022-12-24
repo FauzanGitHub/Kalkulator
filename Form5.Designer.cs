@@ -126,12 +126,18 @@ namespace Kalkulator
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Celcius to Farenheit",
+            "Celcius to Fahrenheit",
             "Celcius to Kelvin",
-            "Farenheit to Celcius",
-            "Farenheit to Kelvin",
+            "Ceclius to Reamur",
+            "Reamur to Fahrenheit",
+            "Reamur to Celcius",
+            "Reamur to Kelvin",
+            "Fahrenheit to Celcius",
+            "Fahrenheit to Kelvin",
+            "Fahrenheit to Reamur",
             "Kelvin to Celcius",
-            "Kelvin to Farenheit"});
+            "Kelvin to Fahrenheit",
+            "Kelvin to Reamur"});
             this.comboBox1.Location = new System.Drawing.Point(13, 38);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(297, 26);

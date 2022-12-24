@@ -213,5 +213,7 @@ namespace Kalkulator
             form.Show();
             this.Hide();
         }
+
+       
     }
 }

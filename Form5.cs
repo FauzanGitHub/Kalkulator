@@ -17,38 +17,69 @@ namespace Kalkulator
             InitializeComponent();
         }
 
-        private double Farenheit;
+        private double Fahrenheit;
         private double Celcius;
         private double Kelvin;
+        private double Reamur;
 
-        private double FarenheitToCelcius
+        private double FahrenheitToCelcius
         {
-            get { return (Farenheit - 32) * 5 / 9; }
-            set { Farenheit = value; }
+            get { return (Fahrenheit - 32) * (5 / 9); }
+            set { Fahrenheit = value; }
         }
-        private double FarenheitToKelvin
+        private double FahrenheitToKelvin
         {
-            get { return (Farenheit - 32) * 5 / 273.15; }
-            set { Farenheit = value; }
+            get { return (Fahrenheit - 32) * (5 / 9) + 273.15; }
+            set { Fahrenheit = value; }
+        }
+        private double FahrenheitToReamur
+        {
+            get { return (Fahrenheit - 32) * (4 / 9); }
+            set { Fahrenheit = value; }
         }
         private double CelciusToKelvin
         {
             get { return Celcius + 273.15; }
             set { Celcius = value; }
         }
-        private double CelciusToFarenheit
+        private double CelciusToFahrenheit
         {
-            get { return (Celcius * 9 / 5) + 32; }
+            get { return (Celcius * (9 / 5)) + 32; }
             set { Celcius = value; }
+        }
+        private double CelciusToReamur
+        {
+            get { return (4/5) * Reamur; }
+            set { Celcius = value; }
+        }
+        private double ReamurToFahrenheit
+        {
+            get { return ((9 / 4) * Fahrenheit) + 32; }
+            set { Reamur = value; }
+        }
+        private double ReamurToCelcius
+        {
+            get { return (5 / 4) * Reamur; }
+            set { Reamur = value; }
+        }
+        private double ReamurToKelvin
+        {
+            get { return ((5 / 4) * Reamur) + 273.15; }
+            set { Reamur = value; }
         }
         private double KelvinToCelcius
         {
             get { return Kelvin - 273.15; }
             set { Kelvin = value; }
         }
-        private double KelvinToFarenheit
+        private double KelvinToFahrenheit
         {
-            get { return (Kelvin - 273.15) * 9 / 5 + 32; }
+            get { return (Kelvin - 273.15) * (9 / 5) + 32; }
+            set { Kelvin = value; }
+        }
+        private double KelvinToReamur
+        {
+            get { return ((4/5) * Kelvin) - 273.15; }
             set { Kelvin = value; }
         }
 
@@ -58,35 +89,65 @@ namespace Kalkulator
             {
                 textBox2.Text = "";
             }
-            else if(comboBox1.Text == "Farenheit to Celcius")
+            else if(comboBox1.Text == "Fahrenheit to Celcius")
             {
-                FarenheitToCelcius = Convert.ToDouble(textBox1.Text);
-                textBox2.Text = FarenheitToCelcius.ToString();
+                FahrenheitToCelcius = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = FahrenheitToCelcius.ToString();
             }
-            else if (comboBox1.Text == "Farenheit to Kelvin")
+            else if (comboBox1.Text == "Fahrenheit to Kelvin")
             {
-                FarenheitToKelvin = Convert.ToDouble(textBox1.Text);
-                textBox2.Text = FarenheitToKelvin.ToString();
+                FahrenheitToKelvin = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = FahrenheitToKelvin.ToString();
             }
-            else if (comboBox1.Text == "Celcius to Farenheit")
+            else if (comboBox1.Text == "Fahrenheit to Reamur")
             {
-                CelciusToFarenheit = Convert.ToDouble(textBox1.Text);
-                textBox2.Text = CelciusToFarenheit.ToString();
+                FahrenheitToReamur = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = FahrenheitToReamur.ToString();
             }
             else if (comboBox1.Text == "Celcius to Kelvin")
             {
                 CelciusToKelvin = Convert.ToDouble(textBox1.Text);
                 textBox2.Text = CelciusToKelvin.ToString();
             }
+            else if (comboBox1.Text == "Celcius to Fahrenheit")
+            {
+                CelciusToFahrenheit = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = CelciusToFahrenheit.ToString();
+            }
+            else if (comboBox1.Text == "Celcius to Reamur")
+            {
+                CelciusToReamur = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = CelciusToReamur.ToString();
+            }
+            else if (comboBox1.Text == "Reamur to Fahrenheit")
+            {
+                ReamurToFahrenheit = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = ReamurToFahrenheit.ToString();
+            }
+            else if (comboBox1.Text == "Reamur to Celcius")
+            {
+                ReamurToCelcius = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = ReamurToCelcius.ToString();
+            }
+            else if (comboBox1.Text == "Reamur to Kelvin")
+            {
+                ReamurToKelvin = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = ReamurToKelvin.ToString();
+            }
             else if (comboBox1.Text == "Kelvin to Celcius")
             {
                 KelvinToCelcius = Convert.ToDouble(textBox1.Text);
                 textBox2.Text = KelvinToCelcius.ToString();
             }
-            else if (comboBox1.Text == "Kelvin to Farenheit")
+            else if (comboBox1.Text == "Kelvin to Fahrenheit")
             {
-                KelvinToFarenheit = Convert.ToDouble(textBox1.Text);
-                textBox2.Text = KelvinToFarenheit.ToString();
+                KelvinToFahrenheit = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = KelvinToFahrenheit.ToString();
+            }
+            else if (comboBox1.Text == "Kelvin to Reamur")
+            {
+                KelvinToReamur = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = KelvinToReamur.ToString();
             }
         }
 
@@ -152,29 +213,53 @@ namespace Kalkulator
         {
             switch(comboBox1.Text)
             {
-                case "Farenheit to Celcius":
-                    label1.Text = "Farenheit";
+                case "Fahrenheit to Celcius":
+                    label1.Text = "Fahrenheit";
                     label2.Text = "Celcius";
                     break;
-                case "Farenheit to Kelvin":
-                    label1.Text = "Farenheit";
+                case "Fahrenheit to Kelvin":
+                    label1.Text = "Fahrenheit";
                     label2.Text = "Kelvin";
+                    break;
+                case "Fahrenheit to Reamur":
+                    label1.Text = "Fahrenheit";
+                    label2.Text = "Reamur";
                     break;
                 case "Celcius to Kelvin":
                     label1.Text = "Celcius";
                     label2.Text = "Kelvin";
                     break;
-                case "Celcius to Farenheit":
+                case "Celcius to Fahrenheit":
                     label1.Text = "Celcius";
-                    label2.Text = "Farenheit";
+                    label2.Text = "Fahrenheit";
                     break;
-                case "Kelvin to Farenheit":
+                case "Celcius to Reamur":
+                    label1.Text = "Celcius";
+                    label2.Text = "Reamur";
+                    break;
+                case "Reamur to Fahrenheit":
+                    label1.Text = "Reamur";
+                    label2.Text = "Fahrenheit";
+                    break;
+                case "Reamur to Celcius":
+                    label1.Text = "Reamur";
+                    label2.Text = "Celcius";
+                    break;
+                case "Reamur to Kelvin":
+                    label1.Text = "Reamur";
+                    label2.Text = "Kelvin";
+                    break;
+                case "Kelvin to Fahrenheit":
                     label1.Text = "Kelvin";
-                    label2.Text = "Farenheit";
+                    label2.Text = "Fahrenheit";
                     break;
                 case "Kelvin to Celcius":
                     label1.Text = "Kelvin";
                     label2.Text = "Celcius";
+                    break;
+                case "Kelvin to Reamur":
+                    label1.Text = "Kelvin";
+                    label2.Text = "Reamur";
                     break;
             }
         }
